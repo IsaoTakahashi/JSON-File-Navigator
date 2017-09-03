@@ -5,7 +5,6 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiManager
 import com.intellij.psi.PsiReferenceBase
-import java.util.*
 
 
 class FilePathReference(element: PsiElement, private val filePath: String) : PsiReferenceBase<PsiElement>(element) {
@@ -15,7 +14,6 @@ class FilePathReference(element: PsiElement, private val filePath: String) : Psi
         val file = baseDir.findFileByRelativePath(filePath)
                 ?: findFileByProjectPath()
                 ?: return null
-
 
         return getPsiFile(file)
     }
