@@ -1,0 +1,35 @@
+<idea-plugin version="2">
+    <id>itaka.intellij.plugin.json.navigator</id>
+    <name>Navigating to project file from JSON string literal</name>
+    <version>1.0</version>
+    <vendor email="ricto415@gmail.com" url="https://github.com/IsaoTakahashi/JSON-File-Navigator">Isao Takahashi</vendor>
+
+    <description><![CDATA[
+    ]]></description>
+
+    <change-notes><![CDATA[
+    ]]>
+    </change-notes>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <idea-version since-build="172.3968.16"/>
+
+    <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <application-components>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <actions>
+    </actions>
+
+</idea-plugin>
