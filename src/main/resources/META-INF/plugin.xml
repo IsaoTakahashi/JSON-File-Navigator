@@ -21,6 +21,7 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
+        <psi.referenceContributor id="FilePathReference" implementation="itaka.intellij.plugin.json.navigator.FilePathContributor"/>
     </extensions>
 
     <application-components>
