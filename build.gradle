@@ -20,7 +20,7 @@ targetCompatibility = JavaVersion.VERSION_1_8
 
 intellij {
     version '172.3968.16'
-    pluginName 'Navigating to project file from JSON string literal'
+    pluginName 'JSON FilePath Navigator'
 }
 
 group 'itaka.intellij.plugin.json.navigator'

@@ -1,10 +1,14 @@
 <idea-plugin version="2">
     <id>itaka.intellij.plugin.json.navigator</id>
-    <name>Navigating to project file from JSON string literal</name>
+    <name>JSON FilePath Navigator</name>
     <version>1.0</version>
-    <vendor email="ricto415@gmail.com" url="https://github.com/IsaoTakahashi/JSON-File-Navigator">Isao Takahashi</vendor>
+    <vendor email="ricto415@gmail.com" url="https://github.com/IsaoTakahashi/JSON-File-Navigator">Isao Takahashi
+    </vendor>
 
     <description><![CDATA[
+        <p>Navigating to project file from JSON string literal</p><br/>
+        <p>This is extension of <b>Navigate > Declaration</b> function.</p>
+        <p>The plugin searches file path in json string value and suggest matched files.</p>
     ]]></description>
 
     <change-notes><![CDATA[
@@ -21,6 +25,8 @@
     -->
 
     <extensions defaultExtensionNs="com.intellij">
+        <psi.referenceContributor id="FilePathReference"
+                                  implementation="itaka.intellij.plugin.json.navigator.FilePathContributor"/>
     </extensions>
 
     <application-components>
