@@ -7,7 +7,7 @@ class FilePathContributorTest : BaseFixtureTestCase() {
         myFixture.configureByFiles("test.json")
 
         val jsonStringLiteral = myFixture.file.findElementAt(30)?.parent!!
-        val fileReferences = getFileReferences(jsonStringLiteral)
+        val fileReferences = getFileReferences(jsonStringLiteral, emptyList())
 
         assertEquals(2, fileReferences.size)
     }

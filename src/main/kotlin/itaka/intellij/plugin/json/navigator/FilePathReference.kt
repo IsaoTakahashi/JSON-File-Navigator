@@ -7,12 +7,13 @@ import com.intellij.psi.PsiManager
 import com.intellij.psi.PsiReferenceBase
 
 
-class FilePathReference(element: PsiElement, private val filePath: String) : PsiReferenceBase<PsiElement>(element) {
+class FilePathReference(element: PsiElement, private val filePath: String, private val searchPaths: List<String>) : PsiReferenceBase<PsiElement>(element) {
 
     override fun resolve(): PsiElement? {
         val baseDir = element.containingFile.virtualFile.parent
         val file = baseDir.findFileByRelativePath(filePath)
                 ?: findFileByProjectPath()
+                ?: findFileBySearchPaths()
                 ?: return null
 
         return getPsiFile(file)
@@ -28,5 +29,11 @@ class FilePathReference(element: PsiElement, private val filePath: String) : Psi
 
     override fun getVariants(): Array<Any> {
         return arrayOf()
+    }
+
+    private fun findFileBySearchPaths(): VirtualFile? {
+        return searchPaths.map {
+            element.project.baseDir.findFileByRelativePath(it + '/' + filePath)
+        }.filterNotNull().firstOrNull()
     }
 }

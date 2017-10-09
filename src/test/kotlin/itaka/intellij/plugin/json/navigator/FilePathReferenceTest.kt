@@ -9,7 +9,7 @@ class FilePathReferenceTest : BaseFixtureTestCase() {
         myFixture.configureByFiles("test.json", "expected.json")
 
         val jsonStringLiteral = myFixture.file.findElementAt(30)?.parent!!
-        val target = FilePathReference(jsonStringLiteral, "expected.json")
+        val target = FilePathReference(jsonStringLiteral, "expected.json", emptyList())
 
         val actual = (target.resolve() as JsonFileImpl).virtualFile.path
         assertEquals("/src/expected.json", actual)
