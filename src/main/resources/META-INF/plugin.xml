@@ -12,6 +12,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
+        <p>(v1.2) add tool window for directory configuration</p>
         <p>(v1.1) compatible for all products</p>
     ]]>
     </change-notes>
@@ -27,6 +28,8 @@
     <extensions defaultExtensionNs="com.intellij">
         <psi.referenceContributor id="FilePathReference"
                                   implementation="itaka.intellij.plugin.json.navigator.FilePathContributor"/>
+        <applicationConfigurable id="FilePathNavigatorConfiguration" displayName="FilePathNavigator"
+                                 instance="itaka.intellij.plugin.json.navigator.FilePathNavigatorConfiguration" groupId="tools"/>
     </extensions>
 
     <application-components>
