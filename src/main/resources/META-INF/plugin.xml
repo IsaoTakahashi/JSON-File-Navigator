@@ -1,7 +1,7 @@
 <idea-plugin version="2">
     <id>itaka.intellij.plugin.json.navigator</id>
     <name>JSON FilePath Navigator</name>
-    <version>1.1</version>
+    <version>1.2</version>
     <vendor email="ricto415@gmail.com" url="https://github.com/IsaoTakahashi/JSON-File-Navigator">Isao Takahashi
     </vendor>
 
@@ -12,7 +12,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-        <p>(v1.2) add tool window for directory configuration</p>
+        <p>(v1.2) add configuration to customize search paths</p>
         <p>(v1.1) compatible for all products</p>
     ]]>
     </change-notes>
@@ -29,7 +29,7 @@
         <psi.referenceContributor id="FilePathReference"
                                   implementation="itaka.intellij.plugin.json.navigator.FilePathContributor"/>
         <applicationService serviceImplementation="itaka.intellij.plugin.json.navigator.FilePathNavigatorState" />
-        <applicationConfigurable id="FilePathNavigatorConfiguration" displayName="FilePathNavigator"
+        <applicationConfigurable id="JsonFilePathNavigatorConfiguration" displayName="JsonFilePathNavigator"
                                  instance="itaka.intellij.plugin.json.navigator.FilePathNavigatorConfiguration" groupId="tools"/>
     </extensions>
 

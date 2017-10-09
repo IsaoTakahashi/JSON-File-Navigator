@@ -9,8 +9,8 @@ import com.intellij.util.xmlb.XmlSerializerUtil
 
 
 @State(
-        name = "FilePathNavigatorState",
-        storages = arrayOf(Storage("FilePathNavigatorState.xml"))
+        name = "JsonFilePathNavigatorState",
+        storages = arrayOf(Storage("JsonFilePathNavigatorState.xml"))
 )
 class FilePathNavigatorState : PersistentStateComponent<FilePathNavigatorState> {
     var searchFilePaths: String? = null
@@ -23,6 +23,12 @@ class FilePathNavigatorState : PersistentStateComponent<FilePathNavigatorState> 
 
     override fun getState(): FilePathNavigatorState? {
         return this
+    }
+
+    fun getPaths(): List<String> {
+        return searchFilePaths.orEmpty()
+                .split(",")
+                .map { it.trim() }
     }
 
 

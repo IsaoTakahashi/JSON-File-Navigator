@@ -20,7 +20,7 @@ class FilePathNavigatorConfiguration : SearchableConfigurable {
         }
 
         return panel {
-            noteRow("Please input search target path with comma")
+            noteRow("Please input additional search path with comma")
             row {
                 pathField(CCFlags.grow)
             }
@@ -29,12 +29,12 @@ class FilePathNavigatorConfiguration : SearchableConfigurable {
 
 
     override fun getId(): String {
-        return "FilePathNavigatorConfiguration"
+        return "JsonFilePathNavigatorConfiguration"
     }
 
     @Nls
     override fun getDisplayName(): String {
-        return "FilePathNavigator"
+        return "JsonFilePathNavigator"
     }
 
     override fun isModified(): Boolean {
