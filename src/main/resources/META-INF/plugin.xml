@@ -28,6 +28,7 @@
     <extensions defaultExtensionNs="com.intellij">
         <psi.referenceContributor id="FilePathReference"
                                   implementation="itaka.intellij.plugin.json.navigator.FilePathContributor"/>
+        <applicationService serviceImplementation="itaka.intellij.plugin.json.navigator.FilePathNavigatorState" />
         <applicationConfigurable id="FilePathNavigatorConfiguration" displayName="FilePathNavigator"
                                  instance="itaka.intellij.plugin.json.navigator.FilePathNavigatorConfiguration" groupId="tools"/>
     </extensions>
