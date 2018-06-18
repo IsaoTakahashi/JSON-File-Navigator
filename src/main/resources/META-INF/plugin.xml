@@ -12,7 +12,7 @@
     ]]></description>
 
     <change-notes><![CDATA[
-        <p>(v1.3) compatible for 181</p>
+        <p>(v1.4) compatible for 181</p>
         <p>(v1.3) compatible for 173</p>
         <p>(v1.2) add configuration to customize search paths</p>
         <p>(v1.1) compatible for all products</p>
@@ -20,7 +20,7 @@
     </change-notes>
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
-    <idea-version since-build="173"/>
+    <idea-version since-build="181"/>
 
     <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
          on how to target different products -->
