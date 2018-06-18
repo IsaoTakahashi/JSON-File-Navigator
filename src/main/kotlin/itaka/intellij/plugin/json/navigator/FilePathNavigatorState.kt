@@ -4,7 +4,6 @@ import com.intellij.openapi.components.PersistentStateComponent
 import com.intellij.openapi.components.ServiceManager
 import com.intellij.openapi.components.State
 import com.intellij.openapi.components.Storage
-import com.intellij.openapi.project.Project
 import com.intellij.util.xmlb.XmlSerializerUtil
 
 
@@ -15,10 +14,8 @@ import com.intellij.util.xmlb.XmlSerializerUtil
 class FilePathNavigatorState : PersistentStateComponent<FilePathNavigatorState> {
     var searchFilePaths: String? = null
 
-    override fun loadState(state: FilePathNavigatorState?) {
-        if (state != null) {
-            XmlSerializerUtil.copyBean(state, this)
-        }
+    override fun loadState(state: FilePathNavigatorState) {
+        XmlSerializerUtil.copyBean(state, this)
     }
 
     override fun getState(): FilePathNavigatorState? {
